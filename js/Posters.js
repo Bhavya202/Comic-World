@@ -7,18 +7,22 @@ AFRAME.registerComponent("comics-posters", {
     const postersRef = [
       {
         id: "superman",
+        title: "Superman",
         url: "./assets/posters/superman-poster.jpg"
       },
       {
         id: "spiderman",
+        title: "Spiderman",
         url: "./assets/posters/spiderman-poster.jpg"
       },
       {
         id: "captain-aero",
+        title: "Captain Aero",
         url: "./assets/posters/captain-aero-poster.jpg"
       },
       {
         id: "outer-space",
+        title: "Outer Space",
         url: "./assets/posters/outer-space-poster.jpg"
       }
     ];
@@ -53,7 +57,7 @@ AFRAME.registerComponent("comics-posters", {
 
     entityEl.setAttribute("position", position);
     entityEl.setAttribute("material", { color: "#fff" });
-
+    entityEl.setAttribute("cursor-listener", {});
     return entityEl;
   },
   createPoster: function(item) {
