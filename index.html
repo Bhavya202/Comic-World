@@ -2,13 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Comic World</title>
+    <title>Comics Store</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
 
     <script src="./js/Posters.js"></script>
     <script src="./js/highlights.js"></script>
-    
+    <script src="./js/infoBanner.js"></script>
   </head>
   <body>
     <a-scene background="color:#90caf9">
@@ -22,7 +22,7 @@
       ></a-plane>
 
       <!-- Poster Container -->
-      <a-entity id="posters-container" comics-posters></a-entity>
+      <a-entity id="posters-container" comics-posters > </a-entity>
 
       <a-camera id="camera" wasd-controls="enabled:false;" position="0 10 20">
         <a-entity
@@ -42,9 +42,18 @@
           <a-entity
             id="app-subtitle"
             position="0 -0.1 0"
-            text="font: dejavu; align: center; width: 1; color: #0F184E; value: Get Your Favourite Comics!!"
+            text="font: dejavu; align: center; width: 1; color: #0F184E; value: !!Get Your Favourite Comics!!"
           ></a-entity>
-        </a-entity>        
+        </a-entity>
+
+        <a-entity
+          id="fadeBackground"
+          geometry="primitive: sphere; radius: 2.5"
+          material="color: black; side: back; shader: flat; transparent: true; opacity: 0.6"
+          visible="false"
+          cursor-listener
+        >
+        </a-entity>
       </a-camera>
     </a-scene>
   </body>
